@@ -52,26 +52,25 @@ p{margin-top:0}
 .menu-toggle{display:none;width:42px;height:42px;padding:10px;border:1px solid var(--line);border-radius:9px;background:#fff}
 .menu-toggle span{display:block;height:2px;margin:4px 0;background:var(--green);border-radius:2px}
 /* HERO */
-/* Hero banner background image */
-.charity-hero {
+/* HERO BACKGROUND IMAGE */
+.hero {
 background-color: #203d2e;
 background-image:
 linear-gradient(
 90deg,
-rgba(16, 37, 26, 0.65) 0%,
-rgba(16, 37, 26, 0.35) 55%,
-rgba(16, 37, 26, 0.10) 100%
+rgba(16, 37, 26, 0.55) 0%,
+rgba(16, 37, 26, 0.25) 100%
 ),
-url("images/hero-elderly.jpg");
+url("hero-elderly.jpg");
 
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 }
 
-/* Mobile image positioning */
+/* MOBILE BACKGROUND POSITION */
 @media (max-width: 768px) {
-.charity-hero {
+.hero {
 background-position: 65% center;
 }
 }
