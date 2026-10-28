@@ -37,7 +37,7 @@ p{margin-top:0}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
 .reveal.is-visible{opacity:1;transform:translateY(0)}
 /* HEADER */
-.site-header{position:relative;z-index:100;background:#fff;border-bottom:1px solid rgba(32,61,46,.08)}
+site-header{position:relative;z-index:100;background:#fff;border-bottom:1px solid rgba(32,61,46,.08)}
 .header-top{display:flex;align-items:center;justify-content:space-between;gap:28px;width:min(1220px,calc(100% - 44px));min-height:82px;margin:auto}
 .site-logo{display:inline-flex;align-items:center;gap:11px;min-width:0}
 .site-logo img{width:43px;height:43px;object-fit:contain;border-radius:10px}
