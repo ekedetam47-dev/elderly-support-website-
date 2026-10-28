@@ -32,8 +32,8 @@
     });
 
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 820) closeMenu();
-    });
+  closeMenu();
+});
   }
 
   // Scroll reveal. Elements remain visible when IntersectionObserver is unavailable.
