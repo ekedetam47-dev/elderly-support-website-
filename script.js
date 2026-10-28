@@ -4,8 +4,7 @@
 ========================================================= */
 (() => {
   'use strict';
-
-  // Mobile navigation
+   / Mobile navigation
   const menuToggle = document.querySelector('.menu-toggle');
   const navigationMenu = document.getElementById('navigationMenu');
 
@@ -36,7 +35,9 @@
 });
   }
 
-  // Scroll reveal. Elements remain visible when IntersectionObserver is unavailable.
+ 
+
+  / // Scroll reveal. Elements remain visible when IntersectionObserver is unavailable.
   const revealElements = document.querySelectorAll('.reveal');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
