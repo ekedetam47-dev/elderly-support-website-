@@ -37,21 +37,237 @@ p{margin-top:0}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
 .reveal.is-visible{opacity:1;transform:translateY(0)}
 /* HEADER */
-site-header{position:relative;z-index:100;background:#fff;border-bottom:1px solid rgba(32,61,46,.08)}
-.header-top{display:flex;align-items:center;justify-content:space-between;gap:28px;width:min(1220px,calc(100% - 44px));min-height:82px;margin:auto}
-.site-logo{display:inline-flex;align-items:center;gap:11px;min-width:0}
-.site-logo img{width:43px;height:43px;object-fit:contain;border-radius:10px}
-.site-logo span{display:flex;flex-direction:column;gap:2px}
-.site-logo strong{font-size:15px;font-weight:800;line-height:1.25}
-.site-logo small{color:#66826a;font-size:8px;font-weight:800;letter-spacing:1.5px}
-.site-nav{display:flex;align-items:center;gap:23px}
-.site-nav>a:not(.button){font-size:11px;font-weight:700;color:#46564b;transition:color .2s}
-.site-nav>a:not(.button):hover{color:#9c7836}
-.nav-actions{display:flex;align-items:center;gap:8px;margin-left:2px}
-.nav-actions .button{min-height:39px;padding:9px 12px;font-size:10px}
-.menu-toggle{display:none;width:42px;height:42px;padding:10px;border:1px solid var(--line);border-radius:9px;background:#fff}
-.menu-toggle span{display:block;height:2px;margin:4px 0;background:var(--green);border-radius:2px}
-/* =====================================
+/*========================
+HEADER AND NAVIGATION
+   Hamburger menu on desktop, tablet and mobile
+========================================= */
+
+.site-header {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(32, 61, 46, 0.08);
+}
+
+.header-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: min(1220px, calc(100% - 44px));
+  min-height: 82px;
+  margin: 0 auto;
+}
+
+/* LOGO */
+
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+  color: #203d2e;
+  text-decoration: none;
+}
+
+.site-logo img {
+  display: block;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.site-logo span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.site-logo strong {
+  color: #203d2e;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.site-logo small {
+  color: #66826a;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* HAMBURGER BUTTON */
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  flex-shrink: 0;
+
+  border: 1px solid #dce4dd;
+  border-radius: 9px;
+  background: #ffffff;
+
+  cursor: pointer;
+  position: relative;
+  z-index: 1002;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 0;
+  background: #203d2e;
+  border-radius: 3px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Animate hamburger into an X when open */
+
+.menu-toggle[aria-expanded="true"] span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* NAVIGATION MENU — HIDDEN BY DEFAULT */
+
+.site-nav {
+  display: none;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+
+  padding: 12px 22px 22px;
+
+  background: #ffffff;
+  border-top: 1px solid #e8eee9;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.10);
+
+  z-index: 1001;
+}
+
+/* JAVASCRIPT ADDS THIS CLASS WHEN OPENED */
+
+.site-nav.is-open {
+  display: flex;
+}
+
+/* NAVIGATION LINKS */
+
+.site-nav > a:not(.button) {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 15px 4px;
+
+  color: #46564b;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+
+  border-bottom: 1px solid #f0f3f0;
+  transition: color 0.2s ease;
+}
+
+.site-nav > a:not(.button):hover {
+  color: #9c7836;
+}
+
+/* DONATE AND GET ASSISTANCE BUTTONS */
+
+.site-nav .nav-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+
+  width: 100%;
+  margin: 16px 0 0;
+}
+
+.site-nav .nav-actions .button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+  min-height: 44px;
+  padding: 12px 16px;
+
+  font-size: 13px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+.menu-toggle:focus-visible,
+.site-nav a:focus-visible {
+  outline: 3px solid #9c7836;
+  outline-offset: 3px;
+}
+
+/* SMALL MOBILE SCREENS */
+
+@media (max-width: 380px) {
+  .header-top {
+    width: calc(100% - 28px);
+    min-height: 72px;
+    gap: 10px;
+  }
+
+  .site-logo {
+    gap: 8px;
+  }
+
+  .site-logo img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .site-logo strong {
+    font-size: 13px;
+  }
+
+  .site-logo small {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .site-nav {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+   }
 HERO SECTION
 ===================================== */
 
