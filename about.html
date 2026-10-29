@@ -1,5 +1,11 @@
-<!-- About Us content only: keep the site's existing header/footer in index.html. -->
-<style>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Learn more about Rosslyn Foundation and the compassionate work we do for older adults and families." />
+    <title>About | Rosslyn Foundation</title>
+    <style>
 .rosslyn-about{--g:#244b38;--gd:#173526;--cream:#f8f7f0;--sage:#e8efe8;--muted:#637168;--line:#dfe7df;color:#1e2c24;font-family:inherit;background:#fff;overflow:hidden}
 .rosslyn-about *{box-sizing:border-box}.rosslyn-about .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
 .rosslyn-about .eyebrow{display:inline-flex;gap:9px;align-items:center;color:var(--g);font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
@@ -15,7 +21,7 @@
 .rosslyn-about .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:49px;padding:0 21px;border-radius:8px;text-decoration:none;font-weight:750;font-size:.92rem}
 .rosslyn-about .primary{background:var(--g);color:#fff}.rosslyn-about .secondary{border:1px solid #cad6cb;color:var(--gd)}
 .rosslyn-about .hero{position:relative;isolation:isolate;background:var(--cream);padding:82px 0;overflow:hidden}
-.rosslyn-about .hero-bg{position:absolute;inset:0;z-index:-2;background-image:linear-gradient(90deg,rgba(18,43,29,.91) 0%,rgba(24,55,38,.78) 48%,rgba(24,55,38,.28) 100%),url('images/about-hero.jpg');background-size:cover;background-position:center;background-repeat:no-repeat}
+.rosslyn-about .hero-bg{position:absolute;inset:0;z-index:-2;background-image:linear-gradient(90deg,rgba(18,43,29,.91) 0%,rgba(24,55,38,.78) 48%,rgba(24,55,38,.28) 100%),url('hero-elderly.jpg');background-size:cover;background-position:center}
 .rosslyn-about .hero-grid{grid-template-columns:minmax(0,1fr)}
 .rosslyn-about .hero-content{max-width:760px;padding:24px 0;color:#fff}
 .rosslyn-about .hero .eyebrow{color:#e0eadc}
@@ -44,78 +50,81 @@
 .rosslyn-about .quote{background:#ffffffdf;border-radius:12px;padding:20px;max-width:390px;color:var(--gd);line-height:1.7}
 .rosslyn-about .quote strong{display:block;margin-top:8px}.rosslyn-about .people-copy p{color:var(--muted)}
 .rosslyn-about .commit{display:grid;grid-template-columns:.9fr 1.1fr;gap:38px}.rosslyn-about .note{padding:14px 17px;border-left:3px solid #8aa383;background:#f6f8f3;color:#58665b;font-size:.9rem}
-.rosslyn-about .final{padding:0 0 78px}.rosslyn-about .final-box{padding:clamp(28px,5vw,52px);border-radius:18px;background:var(--cream);border:1px solid #e6e9df;display:flex;align-items:center;justify-content:space-between;gap:25px}
-.rosslyn-about .final-box p{color:var(--muted);max-width:650px;margin:0}.rosslyn-about .final-box .actions{margin:0;flex-shrink:0}
-@media(max-width:850px){.rosslyn-about .hero-grid,.rosslyn-about .people{grid-template-columns:1fr}.rosslyn-about .hero{padding:52px 0}.rosslyn-about .hero{padding:58px 0}.rosslyn-about .hero-content{padding:8px 0}.rosslyn-about .promise,.rosslyn-about .commit{grid-template-columns:1fr;gap:18px}.rosslyn-about .cards,.rosslyn-about .values{grid-template-columns:repeat(2,1fr)}.rosslyn-about .final-box{align-items:flex-start;flex-direction:column}}
-@media(max-width:560px){.rosslyn-about .wrap{width:calc(100% - 30px)}.rosslyn-about .hero{padding:42px 0}.rosslyn-about h1{font-size:2.55rem}.rosslyn-about .section{padding:56px 0}.rosslyn-about .cards,.rosslyn-about .values,.rosslyn-about .steps{grid-template-columns:1fr}.rosslyn-about .card{padding:22px}.rosslyn-about .hero{padding:46px 0}.rosslyn-about .final{padding-bottom:55px}.rosslyn-about .final-box .actions,.rosslyn-about .btn{width:100%}}
-</style>
-
-<div class="rosslyn-about" id="about-page-content">
-  <section class="hero">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="wrap hero-grid">
-      <div class="hero-content">
-        <span class="eyebrow">About Rosslyn Foundation</span>
-        <h1>Building a community where everyone can live with dignity.</h1>
-        <p class="hero-copy">We believe everyone deserves to feel valued, supported, and cared for, regardless of their circumstances. Through compassionate assistance and community support, we aim to help people overcome challenges and live healthier, more secure lives.</p>
-        <div class="actions">
-          <a class="btn primary" href="#about-mission" data-about-scroll>Discover our mission <span>→</span></a>
-          <a class="btn secondary" href="#about-what-we-do" data-about-scroll>What we do</a>
+.rosslyn-about .final{padding:0 0 78px}.rosslyn-about .final-box{padding:clamp(28px,5vw,52px);border-radius:18px;background:var(--cream);border:1px solid #e6e9df;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.rosslyn-about .final-box h2{margin-bottom:12px}.rosslyn-about .final-box p{color:var(--muted);max-width:650px;margin:0}.rosslyn-about .final-box .actions{margin:0;flex-shrink:0}
+@media(max-width:850px){.rosslyn-about .hero-grid,.rosslyn-about .people{grid-template-columns:1fr}.rosslyn-about .hero{padding:52px 0}.rosslyn-about .hero{padding:58px 0}.rosslyn-about .promise{grid-template-columns:1fr}.rosslyn-about .cards,.rosslyn-about .steps,.rosslyn-about .values{grid-template-columns:1fr 1fr}.rosslyn-about .final-box{display:block}.rosslyn-about .final-box .actions{margin-top:20px}}
+@media(max-width:560px){.rosslyn-about .wrap{width:calc(100% - 30px)}.rosslyn-about .hero{padding:42px 0}.rosslyn-about h1{font-size:2.55rem}.rosslyn-about .section{padding:56px 0}.rosslyn-about .cards,.rosslyn-about .steps,.rosslyn-about .values{grid-template-columns:1fr}.rosslyn-about .actions{display:grid}.rosslyn-about .btn{width:100%}.rosslyn-about .final-box{padding:24px 18px}}
+    </style>
+  </head>
+  <body>
+    <div class="rosslyn-about" id="about-page-content">
+      <section class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="wrap hero-grid">
+          <div class="hero-content">
+            <span class="eyebrow">About Rosslyn Foundation</span>
+            <h1>Building a community where everyone can live with dignity.</h1>
+            <p class="hero-copy">We believe everyone deserves to feel valued, supported, and cared for, regardless of their circumstances. Through compassionate assistance and community support, we aim to help people navigate life’s challenges with respect and hope.</p>
+            <div class="actions">
+              <a class="btn primary" href="#about-mission" data-about-scroll>Discover our mission <span>→</span></a>
+              <a class="btn secondary" href="#about-what-we-do" data-about-scroll>What we do</a>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section class="section" id="about-mission"><div class="wrap"><div class="promise">
+        <div><span class="eyebrow">Our promise</span><h2>Compassion in action. Dignity for everyone.</h2></div>
+        <p>Our work goes beyond meeting immediate needs. We aim to help people feel seen, heard, and respected while connecting them with appropriate resources and meaningful community support. We approach every request with care, empathy, and a desire to make a practical difference.</p>
+      </div></div></section>
+
+      <section class="section soft" id="about-what-we-do"><div class="wrap">
+        <div class="section-head"><span class="eyebrow">What we do</span><h2>Practical support for life's challenges.</h2><p>We focus on helping people navigate difficult circumstances, access essential resources, and connect with compassionate support when they need it most.</p></div>
+        <div class="cards">
+          <article class="card"><div class="icon">⌂</div><h3>Essential Needs Assistance</h3><p>We aim to help eligible individuals access essential supplies and basic necessities during difficult times.</p></article>
+          <article class="card"><div class="icon">♡</div><h3>Care and Well-being</h3><p>We recognise the challenges associated with ageing, isolation, and difficult living circumstances, and seek to support well-being thoughtfully.</p></article>
+          <article class="card"><div class="icon">₦</div><h3>Financial Hardship</h3><p>Through available programmes and resources, we aim to support eligible people experiencing financial difficulty with dignity and respect.</p></article>
+          <article class="card"><div class="icon">♧</div><h3>Companionship and Community</h3><p>We value connection and inclusion, and aim to encourage companionship and community participation for those who may feel isolated.</p></article>
+          <article class="card"><div class="icon">⌕</div><h3>Guidance and Resources</h3><p>We help people explore available support options and identify resources that may better match their circumstances.</p></article>
+          <article class="card"><div class="icon">✓</div><h3>Volunteers and Partnerships</h3><p>We welcome opportunities to work with volunteers and responsible partners who share our commitment to compassionate service.</p></article>
+        </div>
+      </div></section>
+
+      <section class="section"><div class="wrap">
+        <div class="section-head"><span class="eyebrow">Our approach</span><h2>Understand needs. Respond with care.</h2><p>Every person's circumstances are different. We believe support should begin with listening, respect, and clear communication.</p></div>
+        <div class="steps">
+          <div class="step"><span class="num">01 / LISTEN</span><h3>Start with understanding</h3><p>We seek to understand each person's situation without judgement and treat every request with consideration.</p></div>
+          <div class="step"><span class="num">02 / RESPOND</span><h3>Assess needs fairly</h3><p>We aim to direct available resources responsibly and assess requests against relevant programme requirements.</p></div>
+          <div class="step"><span class="num">03 / CONNECT</span><h3>Build useful connections</h3><p>Where appropriate, we help people explore resources, services, and community connections that may be beneficial.</p></div>
+        </div>
+      </div></section>
+
+      <section class="section soft"><div class="wrap">
+        <div class="section-head"><span class="eyebrow">What guides us</span><h2>The values behind our work.</h2><p>These principles shape how we aim to serve individuals, work with communities, and maintain trust.</p></div>
+        <div class="values">
+          <div class="value"><span class="dot"></span><div><h3>Compassion</h3><p>We approach people with empathy, kindness, and understanding.</p></div></div>
+          <div class="value"><span class="dot"></span><div><h3>Dignity</h3><p>We believe every person deserves respect, whatever their circumstances.</p></div></div>
+          <div class="value"><span class="dot"></span><div><h3>Integrity</h3><p>We value honesty, transparency, and responsible stewardship.</p></div></div>
+          <div class="value"><span class="dot"></span><div><h3>Inclusion</h3><p>We seek to make people feel welcomed, respected, and considered.</p></div></div>
+          <div class="value"><span class="dot"></span><div><h3>Community</h3><p>We believe people can achieve more when they support one another.</p></div></div>
+          <div class="value"><span class="dot"></span><div><h3>Responsibility</h3><p>We aim to use resources thoughtfully and assess requests fairly.</p></div></div>
+        </div>
+      </div></section>
+
+      <section class="section"><div class="wrap people">
+        <div class="people-art"><div class="quote">“Every person has a story. Every person deserves to be treated with care.”<strong>People are at the heart of our mission.</strong></div></div>
+        <div class="people-copy"><span class="eyebrow">People first</span><h2>Every person has a story.</h2><p>Behind every request for support is a person with experiences, aspirations, challenges, and hope. We aim to respond with empathy, respect, and practical understanding.</p></div>
+      </div></section>
+
+      <section class="section soft"><div class="wrap commit">
+        <div><span class="eyebrow">Our commitment</span><h2>Support built on trust and respect.</h2></div>
+        <div><p class="muted">We aim to approach support requests with fairness, care, and respect for privacy. Information submitted through our website should be handled responsibly and used for appropriate support-related purposes only.</p></div>
+      </div></section>
+
+      <section class="final"><div class="wrap"><div class="final-box">
+        <div><span class="eyebrow">Be part of the difference</span><h2>There is a place for you in our community.</h2><p>Whether you need assistance, want to volunteer, or would like to explore a partnership, we welcome the opportunity to connect.</p></div>
+        <div class="actions"><a class="btn primary" href="findsupport.html">Find Support →</a><a class="btn secondary" href="volunteer.html">Become a Volunteer</a></div>
+      </div></div></section>
     </div>
-  </section>
-
-  <section class="section" id="about-mission"><div class="wrap"><div class="promise">
-    <div><span class="eyebrow">Our promise</span><h2>Compassion in action. Dignity for everyone.</h2></div>
-    <p>Our work goes beyond meeting immediate needs. We aim to help people feel seen, heard, and respected while connecting them with appropriate resources and meaningful community support. We approach every request with care and seek to make support easier to understand and access.</p>
-  </div></div></section>
-
-  <section class="section soft" id="about-what-we-do"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">What we do</span><h2>Practical support for life's challenges.</h2><p>We focus on helping people navigate difficult circumstances, access essential resources, and feel more connected to their communities.</p></div>
-    <div class="cards">
-      <article class="card"><div class="icon">⌂</div><h3>Essential Needs Assistance</h3><p>We aim to help eligible individuals access essential supplies and basic necessities during difficult times, easing everyday burdens while respecting their dignity.</p></article>
-      <article class="card"><div class="icon">♡</div><h3>Care and Well-being</h3><p>We recognise the challenges associated with ageing, isolation, and difficult living circumstances, and seek to connect people with appropriate care resources.</p></article>
-      <article class="card"><div class="icon">₦</div><h3>Financial Hardship</h3><p>Through available programmes and resources, we aim to support eligible people experiencing financial difficulty and help them explore practical options.</p></article>
-      <article class="card"><div class="icon">♧</div><h3>Companionship and Community</h3><p>We value connection and inclusion, and aim to encourage companionship and community participation for people who may feel isolated.</p></article>
-      <article class="card"><div class="icon">⌕</div><h3>Guidance and Resources</h3><p>We help people explore available support options and identify resources that may better match their circumstances and needs.</p></article>
-      <article class="card"><div class="icon">✓</div><h3>Volunteers and Partnerships</h3><p>We welcome opportunities to work with volunteers and responsible partners who share our commitment to strengthening community support.</p></article>
-    </div>
-  </div></section>
-
-  <section class="section"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">Our approach</span><h2>Understand needs. Respond with care.</h2><p>Every person's circumstances are different. We believe support should begin with listening and be guided by fairness, respect, and responsibility.</p></div>
-    <div class="steps">
-      <div class="step"><span class="num">01 / LISTEN</span><h3>Start with understanding</h3><p>We seek to understand each person's situation without judgement and treat every request with consideration.</p></div>
-      <div class="step"><span class="num">02 / RESPOND</span><h3>Assess needs fairly</h3><p>We aim to direct available resources responsibly and assess requests against relevant programme requirements.</p></div>
-      <div class="step"><span class="num">03 / CONNECT</span><h3>Build useful connections</h3><p>Where appropriate, we help people explore resources, services, and community connections that may be useful.</p></div>
-    </div>
-  </div></section>
-
-  <section class="section soft"><div class="wrap">
-    <div class="section-head"><span class="eyebrow">What guides us</span><h2>The values behind our work.</h2><p>These principles shape how we aim to serve individuals, work with communities, and manage our responsibilities.</p></div>
-    <div class="values">
-      <div class="value"><span class="dot"></span><div><h3>Compassion</h3><p>We approach people with empathy, kindness, and understanding.</p></div></div>
-      <div class="value"><span class="dot"></span><div><h3>Dignity</h3><p>We believe every person deserves respect, whatever their circumstances.</p></div></div>
-      <div class="value"><span class="dot"></span><div><h3>Integrity</h3><p>We value honesty, transparency, and responsible stewardship.</p></div></div>
-      <div class="value"><span class="dot"></span><div><h3>Inclusion</h3><p>We seek to make people feel welcomed, respected, and considered.</p></div></div>
-      <div class="value"><span class="dot"></span><div><h3>Community</h3><p>We believe people can achieve more when they support one another.</p></div></div>
-      <div class="value"><span class="dot"></span><div><h3>Responsibility</h3><p>We aim to use resources thoughtfully and assess requests fairly.</p></div></div>
-    </div>
-  </div></section>
-
-  <section class="section"><div class="wrap people">
-    <div class="people-art"><div class="quote">“Every person has a story. Every person deserves to be treated with care.”<strong>People are at the heart of our mission.</strong></div></div>
-    <div class="people-copy"><span class="eyebrow">People first</span><h2>Every person has a story.</h2><p>Behind every request for support is a person with experiences, aspirations, challenges, and hopes for the future. We recognise the strength it can take to ask for help, and believe that seeking assistance should never mean losing one's dignity.</p><p>Our commitment is to listen with respect, consider each person's circumstances, and help them explore appropriate support options.</p></div>
-  </div></section>
-
-  <section class="section soft"><div class="wrap commit">
-    <div><span class="eyebrow">Our commitment</span><h2>Support built on trust and respect.</h2></div>
-    <div><p class="muted">We aim to approach support requests with fairness, care, and respect for privacy. Information submitted through our website should be handled responsibly and used for appropriate purposes related to assessing or providing assistance.</p><p class="muted">We also aim to communicate clearly about programme requirements and available support. Where a request falls outside our current programmes, we will endeavour to share useful guidance or information about other resources where possible.</p><div class="note"><strong>Eligibility and availability:</strong> Assistance depends on the foundation's actual programme requirements, geographical coverage, and available resources. Submitting a request does not guarantee approval.</div></div>
-  </div></section>
-
-  <section class="final"><div class="wrap"><div class="final-box">
-    <div><span class="eyebrow">Be part of the difference</span><h2>There is a place for you in our community.</h2><p>Whether you need assistance, want to volunteer, or would like to explore a partnership, we invite you to take the next step.</p></div>
-    <div class="actions"><a class="btn primary" href="find-support.html">Find Support →</a><a class="btn secondary" href="volunteer.html">Become a Volunteer</a></div>
-  </div></div></section>
-</div>
+  </body>
+</html>
