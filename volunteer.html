@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Volunteer with Rosslyn Foundation to support older adults with care, dignity, and hope.">
+<meta name="theme-color" content="#203d2e">
+<title>Volunteer With Us | Rosslyn Foundation</title>
+<style>
+:root{--green:#203d2e;--mid:#587563;--pale:#eaf1ec;--text:#29362f;--muted:#657169;--border:#e1e8e2;--page:#fbfcfb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6}img{max-width:100%;display:block}button,input,select,textarea{font:inherit}
+.container{width:min(1120px,calc(100% - 40px));margin:auto}.eyebrow{color:var(--mid);font-size:.78rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;margin:0 0 10px}
+.section-title{font-size:clamp(1.8rem,4vw,2.45rem);line-height:1.2;color:var(--green);text-align:center;margin:0 auto 12px;letter-spacing:-.03em}.section-intro{max-width:760px;margin:0 auto;color:var(--muted);text-align:center}
+.hero{padding:60px 0;background:var(--page)}.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.hero h1{font-size:clamp(2.3rem,5vw,3.5rem);line-height:1.08;letter-spacing:-.04em;color:var(--green);margin:0 0 18px}.hero-copy>p:not(.eyebrow){color:#59645d;margin:0 0 14px}.hero-note{margin-top:22px;padding:14px 16px;border-left:4px solid var(--green);border-radius:0 8px 8px 0;background:var(--pale);color:var(--green);font-size:.93rem}
+.hero-images{display:grid;grid-template-columns:1fr .82fr 1fr;gap:10px;align-items:center}.hero-images .placeholder{height:260px}.hero-images .placeholder:nth-child(2){height:310px;margin-top:30px}
+.placeholder{display:grid;place-items:center;text-align:center;padding:16px;border:1px dashed #9daf9f;border-radius:8px;background:#eef3ef;color:#52665a;font-size:.85rem;overflow-wrap:anywhere}.placeholder strong{display:block;font-size:.95rem}
+.opportunities,.other-ways,.application{padding:72px 0}.opportunity-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 42px;margin-top:38px}.op-card .photo{height:245px;border-radius:9px;overflow:hidden;background:#edf1ee}.op-card img,.help-card img{width:100%;height:100%;object-fit:cover}.op-card h3{font-size:1.3rem;color:var(--green);line-height:1.25;margin:14px 0 7px}.op-card p{margin:0;color:var(--muted)}
+.steps-section{padding:72px 0;background:var(--page)}.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:40px}.step{text-align:center;padding:0 12px}.step-number{display:grid;place-items:center;width:58px;height:58px;border-radius:8px;background:var(--green);color:#fff;font-size:1.5rem;font-weight:800;margin:0 auto 16px}.step h3{color:var(--green);margin:0 0 8px;font-size:1.12rem}.step p{max-width:300px;margin:auto;color:var(--muted);font-size:.95rem}
+.help-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:36px}.help-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 8px 24px #19332410;background:#fff}.help-card .photo{height:190px;background:#edf1ee}.help-card-content{padding:20px}.help-card h3{margin:0 0 8px;color:var(--green);font-size:1.15rem}.help-card p{margin:0;color:var(--muted);font-size:.94rem}
+.gallery{padding:68px 0;background:var(--pale)}.gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:32px}.gallery-grid .placeholder{height:180px}
+.application-panel{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;padding:clamp(24px,5vw,50px);border:1px solid var(--border);border-radius:16px;box-shadow:0 8px 24px #19332410}.application-copy h2{font-size:clamp(1.8rem,3vw,2.35rem);line-height:1.15;color:var(--green);margin:0 0 14px}.application-copy p{color:var(--muted)}.application-copy .placeholder{min-height:190px;margin-top:22px}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.field{display:flex;flex-direction:column;gap:6px}.field.full,.submit,.form-note,.form-status{grid-column:1/-1}.field label{font-size:.9rem;font-weight:700;color:#35443a}.field input,.field select,.field textarea{width:100%;min-height:47px;padding:11px 12px;border:1px solid #cbd5cd;border-radius:6px;background:#fff;color:var(--text)}.field textarea{min-height:115px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid #9db4a3;outline-offset:1px}.submit{min-height:50px;border:0;border-radius:6px;background:var(--green);color:#fff;font-weight:800;cursor:pointer}.submit:hover{background:#162d21}.form-note{font-size:.84rem;color:var(--muted);margin:0}.form-status{margin:0;font-weight:700}.form-status.error{color:#a52b2b}
+@media(max-width:800px){.container{width:min(100% - 30px,620px)}.hero{padding:42px 0}.hero-grid{grid-template-columns:1fr;gap:28px}.hero-images .placeholder{height:210px}.hero-images .placeholder:nth-child(2){height:250px}.opportunities,.other-ways,.application{padding:54px 0}.opportunity-grid{gap:28px 20px}.op-card .photo{height:200px}.help-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.application-panel{grid-template-columns:1fr;gap:28px}}
+@media(max-width:520px){.container{width:calc(100% - 28px)}.hero h1{font-size:2.25rem}.hero-images{gap:7px}.hero-images .placeholder{height:160px;font-size:.75rem;padding:7px}.hero-images .placeholder:nth-child(2){height:195px;margin-top:18px}.opportunity-grid,.help-grid,.steps{grid-template-columns:1fr}.op-card .photo{height:220px}.steps{gap:30px}.help-card .photo{height:210px}.gallery-grid{gap:10px}.gallery-grid .placeholder{height:135px;padding:8px;font-size:.75rem}.form-grid{grid-template-columns:1fr}.field.full,.submit,.form-note,.form-status{grid-column:auto}.application-panel{padding:22px 17px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<!-- Replace the placeholder blocks with <img src="images/your-image.jpg" alt="Description">.
+     The application form is not connected to a backend yet. -->
+<main>
+<section class="hero" aria-labelledby="volunteer-title"><div class="container hero-grid">
+<div class="hero-copy"><p class="eyebrow">Make a meaningful difference</p><h1 id="volunteer-title">Give Your Time. Share Your Care.</h1>
+<p>At Rosslyn Foundation, volunteers help us support older adults with compassion, dignity, and respect. Your time, skills, and kindness can make a real difference in someone’s day.</p>
+<p>Whether you enjoy spending time with people, helping with community activities, sharing professional skills, or supporting outreach work, there may be a place for you on our team.</p>
+<div class="hero-note">Every act of kindness matters. Explore the opportunities below and use the application form when you’re ready to get involved.</div></div>
+<div class="hero-images" aria-label="Volunteer photographs">
+<div class="placeholder"><span><strong>Hero photo 1</strong>images/volunteer-hero-1.jpg</span></div>
+<div class="placeholder"><span><strong>Hero photo 2</strong>images/volunteer-hero-2.jpg</span></div>
+<div class="placeholder"><span><strong>Hero photo 3</strong>images/volunteer-hero-3.jpg</span></div>
+</div></div></section>
+
+<section class="application" id="volunteer-application" aria-labelledby="application-title"><div class="container"><div class="application-panel">
+<div class="application-copy"><p class="eyebrow">Take the next step</p><h2 id="application-title">Apply to Volunteer</h2><p>Complete the short form below to tell us how you would like to help. You can explore the volunteer roles further down the page.</p><div class="placeholder"><span><strong>Application section photo</strong>images/volunteer-application.jpg</span></div></div>
+<form class="form-grid" id="volunteerForm">
+<div class="field"><label for="firstName">First name *</label><input id="firstName" name="firstName" autocomplete="given-name" required></div>
+<div class="field"><label for="lastName">Last name *</label><input id="lastName" name="lastName" autocomplete="family-name" required></div>
+<div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+<div class="field"><label for="location">Town or area</label><input id="location" name="location" autocomplete="address-level2" placeholder="Your town or area"></div>
+<div class="field"><label for="availability">Availability *</label><select id="availability" name="availability" required><option value="">Select availability</option><option>Weekdays</option><option>Weekends</option><option>Flexible</option><option>Occasional / events only</option></select></div>
+<div class="field full"><label for="interest">Preferred volunteer role *</label><select id="interest" name="interest" required><option value="">Choose an area</option><option>Companionship Visits</option><option>Community Outreach</option><option>Events and Activities</option><option>Practical Support</option><option>Skills and Administration</option><option>Fundraising and Awareness</option><option>Open to suggestions</option></select></div>
+<div class="field full"><label for="message">Tell us about yourself</label><textarea id="message" name="message" placeholder="Share your interests, relevant skills, or why you would like to volunteer."></textarea></div>
+<button class="submit" type="submit">Submit Volunteer Application</button>
+<p class="form-note">This form is a front-end template. Connect it to your backend before publishing if you want applications to be delivered and stored.</p><p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+</form>
+</div></div></section>
+
+
+
+<section class="opportunities" aria-labelledby="opportunities-title"><div class="container">
+<p class="eyebrow" style="text-align:center">Find your role</p><h2 class="section-title" id="opportunities-title">Volunteer Opportunities</h2>
+<p class="section-intro">There are many ways to contribute. Choose an area that matches your interests, abilities, and availability.</p>
+<div class="opportunity-grid">
+<article class="op-card"><div class="photo placeholder"><span><strong>Companionship photo</strong>images/companionship.jpg</span></div><h3>Companionship Visits</h3><p>Spend time with older adults through friendly conversation, games, reading, and meaningful social connection.</p></article>
+<article class="op-card"><div class="photo placeholder"><span><strong>Community outreach photo</strong>images/community-outreach.jpg</span></div><h3>Community Outreach</h3><p>Help connect with communities, share information about our work, and support local outreach activities.</p></article>
+<article class="op-card"><div class="photo placeholder"><span><strong>Events photo</strong>images/event-support.jpg</span></div><h3>Events and Activities</h3><p>Assist with planning and running community gatherings, wellbeing activities, and foundation events.</p></article>
+<article class="op-card"><div class="photo placeholder"><span><strong>Practical support photo</strong>images/practical-support.jpg</span></div><h3>Practical Support</h3><p>Help with approved errands, resource preparation, donation sorting, or other practical tasks that support our services.</p></article>
+<article class="op-card"><div class="photo placeholder"><span><strong>Skills and administration photo</strong>images/skills-administration.jpg</span></div><h3>Skills and Administration</h3><p>Contribute skills in communication, record organisation, technology, design, writing, or office support.</p></article>
+<article class="op-card"><div class="photo placeholder"><span><strong>Fundraising photo</strong>images/fundraising.jpg</span></div><h3>Fundraising and Awareness</h3><p>Support awareness campaigns, help organise fundraising activities, and encourage others to support our mission.</p></article>
+</div></div></section>
+
+<section class="steps-section" aria-labelledby="how-title"><div class="container"><h2 class="section-title" id="how-title">How to Volunteer</h2><p class="section-intro">Getting involved starts with three simple steps.</p>
+<div class="steps">
+<article class="step"><div class="step-number">1</div><h3>Explore the Roles</h3><p>Review the opportunities above and think about the skills, interests, and time you can offer.</p></article>
+<article class="step"><div class="step-number">2</div><h3>Send Your Application</h3><p>Complete the volunteer application form with your contact details and preferred area of support.</p></article>
+<article class="step"><div class="step-number">3</div><h3>Connect With Our Team</h3><p>Our team can review your application and explain suitable next steps, subject to the foundation’s process.</p></article>
+</div></div></section>
+
+<section class="other-ways" aria-labelledby="other-title"><div class="container"><h2 class="section-title" id="other-title">Other Ways to Help</h2><p class="section-intro">You can support our mission in ways beyond regular volunteering.</p>
+<div class="help-grid">
+<article class="help-card"><div class="photo placeholder"><span><strong>Donation photo</strong>images/donate.jpg</span></div><div class="help-card-content"><h3>Donate Resources</h3><p>Help provide useful resources that support older adults and strengthen our community programmes.</p></div></article>
+<article class="help-card"><div class="photo placeholder"><span><strong>Skills photo</strong>images/share-skills.jpg</span></div><div class="help-card-content"><h3>Share Your Skills</h3><p>Offer professional knowledge, creative skills, or practical expertise to support our work.</p></div></article>
+<article class="help-card"><div class="photo placeholder"><span><strong>Awareness photo</strong>images/raise-awareness.jpg</span></div><div class="help-card-content"><h3>Raise Awareness</h3><p>Tell others about the importance of care, dignity, and community support for older adults.</p></div></article>
+</div></div></section>
+
+<section class="gallery" aria-labelledby="gallery-title"><div class="container"><h2 class="section-title" id="gallery-title">Our Community in Action</h2><p class="section-intro">Add photos from your activities, events, outreach work, and community partnerships.</p>
+<div class="gallery-grid">
+<div class="placeholder"><span><strong>Gallery photo 1</strong>images/volunteer-gallery-1.jpg</span></div><div class="placeholder"><span><strong>Gallery photo 2</strong>images/volunteer-gallery-2.jpg</span></div><div class="placeholder"><span><strong>Gallery photo 3</strong>images/volunteer-gallery-3.jpg</span></div><div class="placeholder"><span><strong>Gallery photo 4</strong>images/volunteer-gallery-4.jpg</span></div>
+</div></div></section>
+
+
+</main>
+<script>
+/* Replace this demo handler with a POST request to your application API.
+   Do not show a success message until your server confirms the application was saved. */
+document.getElementById("volunteerForm").addEventListener("submit",function(event){
+  event.preventDefault();
+  const status=document.getElementById("formStatus");
+  status.className="form-status error";
+  status.textContent="This form is not connected to the foundation’s application system yet. Connect the backend before accepting submissions.";
+});
+</script>
+</body>
+</html>
